@@ -1,7 +1,4 @@
-use bevy::{
-    core_pipeline::prepass::{DepthPrepass, NormalPrepass},
-    prelude::*,
-};
+use bevy::{core_pipeline::prepass::NormalPrepass, prelude::*};
 use bevy_show_normals::{NormalCamera, ShowNormalPlugin};
 
 fn main() {
@@ -24,7 +21,6 @@ fn setup(
             transform: Transform::from_xyz(2., 2., 3.).looking_at(Vec3::ZERO, Vec3::Y),
             ..default()
         },
-        DepthPrepass,
         NormalPrepass,
         NormalCamera,
     ));
