@@ -6,8 +6,6 @@ use bevy_show_normals::{NormalCamera, ShowNormalPlugin};
 
 fn main() {
     App::new()
-        // MSAA currently doesn't work correctly with the plugin
-        .insert_resource(Msaa::Off)
         .add_plugins((DefaultPlugins, ShowNormalPlugin))
         .add_systems(Startup, setup)
         .run();
