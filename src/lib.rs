@@ -72,7 +72,7 @@ impl FromWorld for NormalPipeline {
                 ShaderStages::FRAGMENT,
                 (
                     // normal prepass
-                    texture_2d(TextureSampleType::Float { filterable: true }),
+                    texture_2d(TextureSampleType::Float { filterable: false }),
                 ),
             ),
         );

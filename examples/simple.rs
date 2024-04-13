@@ -6,6 +6,7 @@ use bevy_show_normals::{NormalCamera, ShowNormalPlugin};
 
 fn main() {
     App::new()
+        .insert_resource(Msaa::Off)
         .add_plugins((DefaultPlugins, ShowNormalPlugin))
         .add_systems(Startup, setup)
         .run();
