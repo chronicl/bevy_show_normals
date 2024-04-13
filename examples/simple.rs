@@ -2,7 +2,7 @@ use bevy::{
     core_pipeline::prepass::{DepthPrepass, NormalPrepass},
     prelude::*,
 };
-use bevy_mod_edge_detection::{NormalCamera, ShowNormalPlugin};
+use bevy_show_normals::{NormalCamera, ShowNormalPlugin};
 
 fn main() {
     App::new()
@@ -25,7 +25,6 @@ fn setup(
             transform: Transform::from_xyz(3., 3., 5.).looking_at(Vec3::ZERO, Vec3::Y),
             ..default()
         },
-        // The edge detection effect requires the depth and normal prepass
         DepthPrepass,
         NormalPrepass,
         NormalCamera,
